@@ -36,6 +36,7 @@ public class MainController {
     private boolean isPercent = false;
 
     public MainController() {
+    	initialize();
     }
 
     @FXML
@@ -49,7 +50,7 @@ public class MainController {
 
     @FXML
     private void handleAdd() {
-    	double tempNum = lastNum + Double.parseDouble(buffer);
+    	double tempNum = Double.parseDouble(curr) + Double.parseDouble(buffer);
         String text = Double.toString(tempNum);
     	display.setText(text);
     	curr = text;
@@ -59,7 +60,7 @@ public class MainController {
     
     @FXML
     private void handleSub() {
-    	double tempNum = lastNum - Double.parseDouble(buffer);
+    	double tempNum = Double.parseDouble(curr) - Double.parseDouble(buffer);
         String text = Double.toString(tempNum);
     	display.setText(text);
     	curr = text;
@@ -69,7 +70,7 @@ public class MainController {
     
     @FXML
     private void handleMult() {
-    	double tempNum = lastNum*Double.parseDouble(buffer);
+    	double tempNum = Double.parseDouble(curr)*Double.parseDouble(buffer);
         String text = Double.toString(tempNum);
     	display.setText(text);
     	curr = text;
@@ -79,7 +80,7 @@ public class MainController {
     
     @FXML
     private void handleDiv() {
-    	double tempNum = lastNum/Double.parseDouble(buffer);
+    	double tempNum = Double.parseDouble(curr)/Double.parseDouble(buffer);
         String text = Double.toString(tempNum);
     	display.setText(text);
     	curr = text;
@@ -125,5 +126,7 @@ public class MainController {
     private void buttonBuffer(ActionEvent evt) {
     	Button button = (Button)evt.getSource();
     	buffer += button.getText();
+    	double temp = Double.parseDouble(buffer);
+    	display.setText(Double.toString(temp));
     }
 }
