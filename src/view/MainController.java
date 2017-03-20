@@ -36,7 +36,7 @@ public class MainController {
     private boolean isPercent = false;
 
     public MainController() {
-    	initialize();
+    	
     }
 
     @FXML
@@ -129,4 +129,64 @@ public class MainController {
     	double temp = Double.parseDouble(buffer);
     	display.setText(Double.toString(temp));
     }
+
+	public Label getDisplay() {
+		return display;
+	}
+
+	public Button getClear() {
+		return clear;
+	}
+
+	public Button getPosNeg() {
+		return posNeg;
+	}
+
+	public Button getPercent() {
+		return percent;
+	}
+
+	public Button getDiv() {
+		return div;
+	}
+
+	public Button getMult() {
+		return mult;
+	}
+
+	public Button getSub() {
+		return sub;
+	}
+
+	public Button getAdd() {
+		return add;
+	}
+
+	public Button getEqual() {
+		return equal;
+	}
+
+	public Main getMain() {
+		return main;
+	}
+
+	public double getLastNum() {
+		return lastNum;
+	}
+
+	public String getCurr() {
+		return curr;
+	}
+
+	public String getLastFunct() {
+		return lastFunct;
+	}
+
+	public String getBuffer() {
+		return buffer;
+	}
+
+	public boolean isPercent() {
+		return isPercent;
+	}
 }
